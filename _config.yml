@@ -1,6 +1,7 @@
 ### Site Settings ###
-title               : Intro to Information Visualization
+title               : CIS 3755 Introduction to Information Visualization
 description         : Student data visualization projects from CIS 3755 Introduction to Information Visualization, taught by Stephen MacNeil at Temple University. Explore interactive D3.js visualizations that combine design, data, and creativity.
+url                 : "https://information-visualization-at-temple.github.io"
 baseurl             : ""                  # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : tu-data-vis/tu-data-vis.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)

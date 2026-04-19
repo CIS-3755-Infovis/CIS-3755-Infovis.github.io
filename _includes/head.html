@@ -2,18 +2,37 @@
   {% assign title = page.metaTitle | default: site.title | escape %}
   {% assign description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
   {% assign image = page.image | default: site.author.image %}
+  {% assign canonical_url = page.url | replace:'index.html','' | absolute_url %}
+  {% assign social_image = image | absolute_url %}
+  {% if page.noindex == true %}
+    {% assign robots_value = "noindex, nofollow" %}
+  {% else %}
+    {% assign robots_value = "index, follow" %}
+  {% endif %}
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="{{ robots_value }}">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
-  <meta property="og:image" content="{{ image }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  {% if image %}
+  <meta property="og:image" content="{{ social_image }}">
+  {% endif %}
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  {% if image %}
+  <meta name="twitter:image" content="{{ social_image }}">
+  {% endif %}
 
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ canonical_url }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

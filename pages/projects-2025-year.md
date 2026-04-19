@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: Student Projects
-metaTitle: "Student Projects 2025 | CIS 3755 Information Visualization"
+metaTitle: "Student Projects 2025 | CIS 3755 | Temple University"
 description: "Browse Spring 2025 student-built information visualization projects from CIS 3755 at Temple University."
 permalink: /projects/2025/
 weight: 2

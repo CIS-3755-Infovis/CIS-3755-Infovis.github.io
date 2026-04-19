@@ -1,5 +1,8 @@
 ---
 layout: home
+title: Home
+metaTitle: "CIS 3755 Information Visualization | Temple University"
+description: "CIS 3755 at Temple University introduces students to information visualization through critique, design, interaction, and portfolio-ready web-based data storytelling."
 permalink: /
 ---
 <section class="grid gap-8 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-soft backdrop-blur md:p-10 xl:grid-cols-[1.5fr_0.85fr]">

@@ -1,13 +1,11 @@
 ---
 layout: page
 title: About 
-metaTitle: "About | CIS 3755 Information Visualization" 
+metaTitle: "About CIS 3755 | Temple University" 
 description: "CIS 3755 is an Information Visualization course at Temple University created and taught by Stephen MacNeil. Students explore visual encoding, perception, color theory, and interactive data visualization through active learning lectures and D3.js labs." 
 permalink: /about/
 weight: 3
 ---
-
-# **About the Course**
 
 **CIS 3755: Introduction to Information Visualization** explores how data can be transformed into clear, compelling, and interactive visual representations. Originally introduced as a special topics course (CIS 4330/4360) in Spring 2022, this class quickly gained popularity and was offered three times before earning its own permanent course number. Today, it serves as an entry point for students interested in data visualization, human–computer interaction, and visual analytics.
 
