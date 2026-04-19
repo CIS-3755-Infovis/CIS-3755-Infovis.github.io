@@ -2,5 +2,40 @@
 layout: null
 permalink: /404.html
 ---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+{% include head.html %}
+<body class="min-h-screen overflow-hidden bg-slate-950 text-slate-100">
+  <main class="relative isolate flex min-h-screen items-center justify-center px-6 py-12">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(157,34,53,0.28),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(241,196,83,0.18),_transparent_28%),linear-gradient(180deg,_#0f172a_0%,_#020617_100%)]"></div>
 
-{% include 404.html %}
+    <div class="absolute left-[8%] top-[18%] h-32 w-32 rounded-full border border-gold/30 bg-gold/10 blur-[1px]"></div>
+    <div class="absolute right-[12%] top-[14%] h-16 w-16 rounded-full border border-white/20 bg-white/5"></div>
+    <div class="absolute bottom-[18%] left-[14%] h-24 w-24 rounded-full border border-templeCherry/40 bg-templeCherry/10"></div>
+    <div class="absolute bottom-[12%] right-[18%] h-40 w-40 rounded-full border border-white/10 bg-white/[0.03]"></div>
+
+    <div class="absolute inset-x-[16%] top-1/2 -z-10 hidden -translate-y-1/2 items-center gap-6 lg:flex">
+      <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gold/40 to-white/20"></div>
+      <div class="h-3 w-3 rounded-full bg-gold"></div>
+      <div class="h-px flex-1 bg-gradient-to-r from-white/20 via-templeCherry/40 to-transparent"></div>
+    </div>
+
+    <section class="w-full max-w-4xl rounded-[2rem] border border-white/10 bg-slate-900/70 p-10 text-center shadow-soft backdrop-blur md:p-14">
+      <p class="text-xs font-semibold uppercase tracking-[0.36em] text-gold">404</p>
+      <h1 class="mt-4 font-display text-5xl leading-none text-white sm:text-6xl md:text-7xl">Lost in the data.</h1>
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+        The page you were trying to reach is missing, but the rest of the course archive is still here to explore.
+      </p>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="{{ '/projects/2025/' | relative_url }}" class="rounded-full bg-gold px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-[#f7d372]">
+          Browse Student Projects
+        </a>
+        <a href="{{ '/' | relative_url }}" class="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
+          Return Home
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
