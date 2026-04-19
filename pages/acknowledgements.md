@@ -7,6 +7,4 @@ permalink: /acknowledgements/
 weight: 3
 ---
 
-# **Acknowledgements**
-
 {% include acknowledgements/index.html %}

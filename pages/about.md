@@ -71,4 +71,4 @@ This course is designed to ensure that you have a **portfolio item** you can sha
 
 See projects from the first time the course was offered in the following link:  
 
-[Intro to Information Visualization – Spring 2022](/projects-2022)
+[Intro to Information Visualization – Spring 2022](/projects/2022/)

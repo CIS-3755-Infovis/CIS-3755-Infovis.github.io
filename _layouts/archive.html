@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+{% include head.html %}
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="relative isolate overflow-hidden">
+    <div class="absolute inset-x-0 top-0 -z-10 h-[22rem] bg-[radial-gradient(circle_at_top_left,_rgba(157,34,53,0.24),_transparent_34%),linear-gradient(180deg,_#101826_0%,_#0b1220_60%,_#08101d_100%)]"></div>
+
+    <div class="mx-auto flex min-h-screen max-w-7xl flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8">
+      {% include navbar.html %}
+      {% include year.html %}
+
+      <main id="projects-gallery" class="scroll-mt-8 pb-12 pt-8">
+        {{ content }}
+      </main>
+    </div>
+  </div>
+
+  {% include footer.html %}
+</body>
+</html>

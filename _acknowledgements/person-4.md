@@ -1,7 +1,7 @@
 ---
-name: Kush Patel
+name: Louise Dupont
 role: Teaching Assistant
-portrait: kush-patel.jpeg
+portrait: louise-dupont.png
 description:
 external_url: https://github.com
 ---

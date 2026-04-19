@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-
-<!--
-  portfolYOU Jekyll theme by Youssef Raafat
-  Free for personal and commercial use under the MIT license
-  https://github.com/YoussefRaafatNasry/portfolYOU
--->
-
-<html lang="en" class="h-100">
-
+<html lang="en" class="scroll-smooth">
 {% include head.html %}
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="relative isolate overflow-hidden">
+    <div class="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,_rgba(157,34,53,0.28),_transparent_38%),radial-gradient(circle_at_top_right,_rgba(241,196,83,0.18),_transparent_30%),linear-gradient(180deg,_#101826_0%,_#0b1220_60%,_#08101d_100%)]"></div>
 
-<body class="h-100 d-flex flex-column">
+    <div class="mx-auto flex min-h-screen max-w-7xl flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8">
+      {% include navbar.html %}
 
-  <main class="flex-shrink-0 container mt-5">
-    {% include navbar.html %}
-    <div class="col-lg-10"><h5>CIS 3755</h5></div>
-    {% include year.html %}
-    {{ content }}
-  </main>
+      <section class="mt-10 grid gap-8 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-soft backdrop-blur md:grid-cols-[1.4fr_0.9fr] md:p-10">
+        <div class="space-y-6">
+          <div class="inline-flex items-center rounded-full border border-gold/30 bg-gold/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.24em] text-gold">
+            Temple University • CIS 3755
+          </div>
+          <div class="space-y-4">
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-300">Introduction to Information Visualization</p>
+            <h1 class="max-w-3xl font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+              Browse student-built visualization projects across recent course offerings.
+            </h1>
+            <p class="max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+              Explore the CIS 3755 archive by year and see how Temple students approach storytelling, interaction design, and web-based data visualization.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
+          <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-5">
+            <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Archive focus</p>
+            <p class="mt-3 text-lg font-semibold text-white">A dedicated browsing surface for project galleries, not the course overview.</p>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-templeCherry/25 to-slate-900/80 p-5">
+            <p class="text-sm uppercase tracking-[0.2em] text-slate-300">Jump directly</p>
+            <p class="mt-3 text-lg font-semibold text-white">Use the anchored year navigation below to move between cohorts quickly.</p>
+          </div>
+        </div>
+      </section>
+
+      {% include year.html %}
+
+      <main id="projects-gallery" class="scroll-mt-8 pb-12 pt-8">
+        {{ content }}
+      </main>
+    </div>
+  </div>
+
   {% include footer.html %}
-
-  {% include analytics.html %}
-  {% include scripts.html %}
-
-  {%- if site.buymeacoffee.enabled == true -%}
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}" data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right" data-x_margin="16" data-y_margin="16"></script>
-  {%- endif -%}
 </body>
-
 </html>

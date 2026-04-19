@@ -1,20 +1,18 @@
-{% assign url_2022 = site.baseurl | append: '/projects-2022' %}
-{% assign url_2023 = site.baseurl | append: '/projects-2023' %}
-{% assign url_2025 = site.baseurl | append: '/projects-2025' %}
+{% assign url_2022 = site.baseurl | append: '/projects/2022/' %}
+{% assign url_2023 = site.baseurl | append: '/projects/2023/' %}
+{% assign url_2025 = site.baseurl | append: '/projects/2025/' %}
 
-<ul class="nav nav-pills justify-content-end">
-    <li class="nav-item p-2">View Projects By Year</li>
-    <li class="nav-item">
-      <a class="nav-link btn-secondary {% if page.url == '/projects-2022' %} active {% endif %}" tabindex="-1" aria-disabled="true" href="{{ url_2022 }}">2022</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link btn-secondary  {% if page.url == '/projects-2023' %} active {% endif %}" tabindex="-1" aria-disabled="true" href="{{ url_2023 }}">2023</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link btn-secondary {% if page.url == '/' %} active {% elsif page.url == '/projects-2025' %} active {% endif %}"  href="{{ url_2025 }}">2025</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link btn-secondary disabled {% if page.url == '/projects-2026' %} active {% endif %}" tabindex="-1" aria-disabled="true" href="{{ url_2025 }}">2026</a>
-    </li>
-  </ul>
-  
+<section class="mt-8 rounded-[1.75rem] border border-white/10 bg-slate-900/60 p-4 backdrop-blur sm:p-5">
+  <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400">Browse by year</p>
+      <p class="mt-1 text-sm text-slate-300">Compare recent cohorts and see how the course has evolved.</p>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      <a href="{{ url_2022 }}" class="rounded-full border px-4 py-2 text-sm font-semibold transition {% if page.archive_year == '2022' %}border-gold bg-gold text-slate-950{% else %}border-white/10 bg-white/5 text-slate-100 hover:border-gold/50 hover:bg-white/10{% endif %}">2022</a>
+      <a href="{{ url_2023 }}" class="rounded-full border px-4 py-2 text-sm font-semibold transition {% if page.archive_year == '2023' %}border-gold bg-gold text-slate-950{% else %}border-white/10 bg-white/5 text-slate-100 hover:border-gold/50 hover:bg-white/10{% endif %}">2023</a>
+      <a href="{{ url_2025 }}" class="rounded-full border px-4 py-2 text-sm font-semibold transition {% if page.archive_year == '2025' %}border-gold bg-gold text-slate-950{% else %}border-white/10 bg-white/5 text-slate-100 hover:border-gold/50 hover:bg-white/10{% endif %}">2025</a>
+      <span class="rounded-full border border-dashed border-white/10 px-4 py-2 text-sm font-semibold text-slate-500">2026 coming soon</span>
+    </div>
+  </div>
+</section>

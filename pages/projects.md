@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Student Projects
-description: "Redirecting to the Spring 2025 student projects page."
-permalink: /projects-2025
+metaTitle: "Student Projects | CIS 3755 Information Visualization"
+description: "Redirecting to the latest CIS 3755 student project gallery."
+permalink: /projects/
 sitemap: false
 ---
 <script>
@@ -10,5 +11,5 @@ sitemap: false
 </script>
 <noscript>
   <meta http-equiv="refresh" content="0; url={{ '/projects/2025/' | relative_url }}">
-  <a href="{{ '/projects/2025/' | relative_url }}">Go to Spring 2025 student projects.</a>
+  <a href="{{ '/projects/2025/' | relative_url }}">Go to the latest student projects.</a>
 </noscript>

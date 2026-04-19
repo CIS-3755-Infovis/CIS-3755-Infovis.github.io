@@ -2,6 +2,6 @@
 name: Marshall Walsh
 role: Teaching Assistant
 portrait: Placeholder.png
-description: Web developer
+description:
 external_url: https://github.com
 ---

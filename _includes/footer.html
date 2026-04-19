@@ -1,22 +1,15 @@
-<footer class="mt-auto py-3 text-center">
-
-    <small class="text-muted mb-2">
-      Intro to Information Visualization | Temple University
-    </small>
-  
-    {% include social.html %}
-  
-    {%- assign theme_name = "portfolYOU" -%}
-    {%- assign theme_repo = "https://github.com/YoussefRaafatNasry/portfolYOU" -%}
-    <small id="attribution">
-      theme <a href="{{ theme_repo }}">{{ theme_name }}</a>
-    </small>
-
-      <!-- Theme style -->
-  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
-
-  <!-- Animate CSS CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
-
-  
-  </footer>
+<footer class="border-t border-white/10 bg-slate-950/80">
+  <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-slate-400 sm:px-6 lg:px-8 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p class="font-semibold text-slate-200">CIS 3755 • Introduction to Information Visualization</p>
+      <p class="mt-1">Temple University Department of Computer &amp; Information Sciences</p>
+    </div>
+    <div class="flex items-center gap-4">
+      <a class="transition hover:text-gold" href="{{ '/' | relative_url }}">Home</a>
+      <a class="transition hover:text-gold" href="{{ '/projects/2025/' | relative_url }}">Student Projects</a>
+      <a class="transition hover:text-gold" href="{{ '/about/' | relative_url }}">About the course</a>
+      <a class="transition hover:text-gold" href="{{ '/acknowledgements/' | relative_url }}">Course team</a>
+      <a class="transition hover:text-gold" href="/Intro-to-Information-Visualization-Syllabus.pdf">Syllabus</a>
+    </div>
+  </div>
+</footer>

@@ -1,20 +1,50 @@
 ---
 ---
-
-.btn-secondary {
-    color:rgb(68, 68, 68);
-    background-color: #bbbbbb;
-    margin-right: 8px;;
+:root {
+  color-scheme: dark;
 }
 
-.btn-secondary:hover {
-    color:white;
-    background-color: #545b62;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.btn-secondary.disabled {
-    color:#545b62;
-    background-color: #bbbbbb;
+body {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
-@import "portfolYOU";
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.prose {
+  color: #d7deea;
+}
+
+.prose :where(h1, h2, h3, h4) {
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+  color: #fff;
+}
+
+.prose a {
+  color: #f1c453;
+  font-weight: 600;
+}
+
+.prose strong {
+  color: #fff;
+}
+
+.prose code {
+  color: #f8f4ee;
+}
+
+.prose hr {
+  border-color: rgba(255, 255, 255, 0.12);
+}

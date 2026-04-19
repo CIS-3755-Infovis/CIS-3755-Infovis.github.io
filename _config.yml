@@ -3,7 +3,6 @@ title               : Intro to Information Visualization
 description         : Student data visualization projects from CIS 3755 Introduction to Information Visualization, taught by Stephen MacNeil at Temple University. Explore interactive D3.js visualizations that combine design, data, and creativity.
 baseurl             : ""                  # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : tu-data-vis/tu-data-vis.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
-remote_theme        : YoussefRaafatNasry/portfolYOU
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
@@ -17,6 +16,13 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
+  - pages/projects.md
+  - pages/projects-2022.md
+  - pages/projects-2023.md
+  - pages/projects-2025.md
+  - pages/projects-2022-year.md
+  - pages/projects-2023-year.md
+  - pages/projects-2025-year.md
 
 
 

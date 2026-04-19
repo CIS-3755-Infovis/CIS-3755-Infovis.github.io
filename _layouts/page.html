@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-
-<!--
-  portfolYOU Jekyll theme by Youssef Raafat
-  Free for personal and commercial use under the MIT license
-  https://github.com/YoussefRaafatNasry/portfolYOU
--->
-
-<html lang="en" class="h-100">
-
+<html lang="en" class="scroll-smooth">
 {% include head.html %}
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(circle_at_top,_rgba(157,34,53,0.28),_transparent_38%),linear-gradient(180deg,_#111827_0%,_#0b1120_100%)]"></div>
 
-<body class="h-100 d-flex flex-column">
-
-  <main class="flex-shrink-0 container mt-5">
+  <div class="mx-auto flex min-h-screen max-w-7xl flex-col px-4 pb-10 pt-6 sm:px-6 lg:px-8">
     {% include navbar.html %}
-    <div class="col-lg-10"><h5>CIS 3755</h5></div>
-    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+
+    <section class="mt-10 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-soft backdrop-blur md:p-10">
+      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-gold">Temple University • CIS 3755</p>
+      <h1 class="mt-4 max-w-3xl font-display text-4xl text-white sm:text-5xl">{{ page.title }}</h1>
+      <p class="mt-4 max-w-3xl text-base leading-8 text-slate-200">
+        {{ page.description | default: site.description }}
+      </p>
+    </section>
+
+    <main class="py-8">
+      <article class="prose prose-invert prose-slate max-w-4xl rounded-[2rem] border border-white/10 bg-slate-900/70 p-8 shadow-soft sm:p-10">
         {{ content }}
-    </div>
-  </main>
+      </article>
+    </main>
+  </div>
+
   {% include footer.html %}
-
-  {% include analytics.html %}
-
-  {%- if site.buymeacoffee.enabled == true -%}
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}" data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right" data-x_margin="16" data-y_margin="16"></script>
-  {%- endif -%}
 </body>
-
 </html>
