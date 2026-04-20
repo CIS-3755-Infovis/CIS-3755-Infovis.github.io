@@ -1,0 +1,30 @@
+{% assign image = include.image %}
+{% assign alt = include.alt | default: "" %}
+{% assign class_name = include.class | default: "" %}
+{% assign sizes = include.sizes | default: image.sizes %}
+{% assign loading = include.loading | default: "lazy" %}
+{% assign decoding = include.decoding | default: "async" %}
+{% assign fetchpriority = include.fetchpriority %}
+{% assign fallback_src = image.fallback_src | relative_url %}
+{% assign webp_srcset = image.webp_srcset | replace: '/assets/', '/assets/' %}
+{% assign fallback_srcset = image.fallback_srcset | replace: '/assets/', '/assets/' %}
+
+{% if image %}
+  <picture>
+    {% if image.webp_srcset %}
+      <source type="image/webp" srcset="{{ webp_srcset }}" sizes="{{ sizes }}">
+    {% endif %}
+    <img
+      class="{{ class_name }}"
+      src="{{ fallback_src }}"
+      srcset="{{ fallback_srcset }}"
+      sizes="{{ sizes }}"
+      width="{{ image.width }}"
+      height="{{ image.height }}"
+      alt="{{ alt }}"
+      loading="{{ loading }}"
+      decoding="{{ decoding }}"
+      {% if fetchpriority %}fetchpriority="{{ fetchpriority }}"{% endif %}
+    >
+  </picture>
+{% endif %}

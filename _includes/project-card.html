@@ -1,16 +1,23 @@
 <article class="group h-full">
   <a
     href="{{ project_url | default: '#' }}"
-    class="flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-900/80 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-slate-900"
+    class="flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-platformBorder bg-white shadow-panel transition duration-300 hover:-translate-y-1 hover:border-platformBlue/40 hover:shadow-soft"
     {%- if external and site.open_new_tab -%} target="_blank" rel="noreferrer" {%- endif -%}
   >
     {%- if project_img -%}
-      <div class="aspect-[16/10] overflow-hidden bg-slate-800">
-        <img id="{{ project_id }}-img" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" src="/img/projects/{{ project_img }}" alt="{{ project_name }}">
+      {% assign responsive_projects = site.data.responsive_images["projects"] %}
+      {% assign project_image = responsive_projects[project_img] %}
+      {% assign project_alt = "Screenshot of a student-built D3 data visualization about " | append: project_name | append: ", created for Temple University CIS 3755 Information Visualization." %}
+      <div class="aspect-[16/10] overflow-hidden bg-slate-100">
+        {% if project_image %}
+          {% include responsive-image.html image=project_image alt=project_alt class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" %}
+        {% else %}
+          <img id="{{ project_id }}-img" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" src="/img/projects/{{ project_img }}" alt="{{ project_alt }}" loading="lazy" decoding="async">
+        {% endif %}
       </div>
     {%- else -%}
-      <div class="flex aspect-[16/10] items-end bg-[linear-gradient(135deg,_rgba(157,34,53,0.9),_rgba(23,32,51,0.95))] p-6">
-        <p class="max-w-xs text-sm font-semibold uppercase tracking-[0.24em] text-white/80">
+      <div class="flex aspect-[16/10] items-end bg-[linear-gradient(135deg,_#eff6ff,_#dbeafe)] p-6">
+        <p class="max-w-xs text-sm font-semibold uppercase tracking-[0.24em] text-platformBlueDark">
           Student visualization project
         </p>
       </div>
@@ -18,23 +25,23 @@
 
     <div class="flex flex-1 flex-col p-6">
       <div class="flex items-center justify-between gap-3">
-        <p class="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-platformBlue">
           {% if project_type == "remote" %}GitHub{% else %}Student project{% endif %}
         </p>
       </div>
 
-      <h3 id="{{ project_id }}-name" class="mt-3 text-2xl font-bold leading-tight text-white">
+      <h3 id="{{ project_id }}-name" class="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-platformText">
         {{ project_name }}
       </h3>
 
-      <p id="{{ project_id }}-desc" class="mt-3 flex-1 text-sm leading-7 text-slate-300">
+      <p id="{{ project_id }}-desc" class="mt-3 flex-1 text-sm leading-7 text-platformMuted">
         {{ project_desc }}
       </p>
 
       {%- if project_tools and project_tools.size > 0 -%}
         <div id="{{ project_id }}-tools" class="mt-5 flex flex-wrap gap-2">
           {%- for tool in project_tools -%}
-            <span class="rounded-full border border-gold/20 bg-gold/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold">{{ tool }}</span>
+            <span class="rounded-full border border-platformBorder bg-platformSky px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-platformBlueDark">{{ tool }}</span>
           {%- endfor -%}
         </div>
       {%- endif -%}

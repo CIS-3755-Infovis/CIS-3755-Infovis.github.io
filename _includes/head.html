@@ -34,31 +34,7 @@
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ canonical_url }}">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            templeCherry: '#9D2235',
-            slateInk: '#172033',
-            sand: '#F8F4EE',
-            gold: '#F1C453'
-          },
-          fontFamily: {
-            sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            display: ['Fraunces', 'ui-serif', 'Georgia', 'serif']
-          },
-          boxShadow: {
-            soft: '0 24px 60px -28px rgba(23, 32, 51, 0.35)'
-          }
-        }
-      }
-    };
-  </script>
+  <link rel="icon" type="image/png" sizes="64x64" href="{{ '/assets/favicon-temple.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>

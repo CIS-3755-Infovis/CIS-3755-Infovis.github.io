@@ -1,7 +1,7 @@
 ---
 ---
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html,
@@ -11,7 +11,9 @@ body {
 }
 
 body {
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #102033;
+  background: #f6f8fc;
 }
 
 a {
@@ -24,27 +26,39 @@ img {
 }
 
 .prose {
-  color: #d7deea;
+  color: #314056;
 }
 
 .prose :where(h1, h2, h3, h4) {
-  font-family: "Fraunces", ui-serif, Georgia, serif;
-  color: #fff;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #102033;
 }
 
 .prose a {
-  color: #f1c453;
+  color: #1f4ed8;
   font-weight: 600;
 }
 
 .prose strong {
-  color: #fff;
+  color: #102033;
 }
 
 .prose code {
-  color: #f8f4ee;
+  color: #102033;
 }
 
 .prose hr {
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(16, 32, 51, 0.12);
+}
+
+.page-content-wide {
+  max-width: none;
+}
+
+.ack-role {
+  white-space: nowrap;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
 }

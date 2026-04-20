@@ -1,0 +1,33 @@
+---
+layout: null
+permalink: /image-sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {% assign project_groups = "projects-2025,projects-2023,projects-2022" | split: "," %}
+  {% for group in project_groups %}
+    {% assign projects = site[group] | sort: "name" %}
+    {% for project in projects %}
+      {% if project.image %}
+        {% assign image_manifest_group = site.data.responsive_images["projects"] %}
+        {% assign image_data = image_manifest_group[project.image] %}
+        {% assign image_title = project.name | escape %}
+        {% assign image_caption = "Screenshot of a student-built D3 data visualization about " | append: project.name | append: ", created for Temple University CIS 3755 Information Visualization." %}
+  <url>
+    <loc>{{ project.url | absolute_url }}</loc>
+    <image:image>
+      {% if image_data and image_data.source_path %}
+      <image:loc>{{ image_data.source_path | absolute_url }}</image:loc>
+      {% else %}
+      <image:loc>{{ '/img/projects/' | append: project.image | absolute_url }}</image:loc>
+      {% endif %}
+      <image:title>{{ image_title }}</image:title>
+      <image:caption>{{ image_caption | escape }}</image:caption>
+    </image:image>
+  </url>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</urlset>

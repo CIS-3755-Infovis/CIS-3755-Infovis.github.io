@@ -1,0 +1,14 @@
+{
+  "name": "cis-3755-infovis-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/tailwind-source.css -o ./assets/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/tailwind-source.css -o ./assets/css/tailwind.css --watch",
+    "build:images": "node ./scripts/build-responsive-images.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.4.17"
+  }
+}

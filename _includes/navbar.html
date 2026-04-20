@@ -1,13 +1,13 @@
-<nav class="rounded-[1.75rem] border border-white/10 bg-slate-900/80 px-4 py-4 shadow-soft backdrop-blur sm:px-6">
+<nav class="rounded-[1.5rem] border border-platformBorder bg-white px-4 py-4 shadow-panel sm:px-6">
   <div class="flex items-center justify-between gap-4">
     <a class="group" href="{{ site.baseurl }}/">
-      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Temple University</p>
-      <p class="mt-1 text-lg font-bold text-white transition group-hover:text-gold sm:text-xl">{{ site.title }}</p>
+      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-platformBlue">Temple University</p>
+      <p class="mt-1 text-lg font-extrabold tracking-tight text-platformText transition group-hover:text-platformBlue sm:text-xl">{{ site.title }}</p>
     </a>
 
     <button
       type="button"
-      class="inline-flex items-center rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-gold/40 hover:text-gold md:hidden"
+      class="inline-flex items-center rounded-full border border-platformBorder px-4 py-2 text-sm font-semibold text-platformText transition hover:border-platformBlue/40 hover:text-platformBlue md:hidden"
       aria-expanded="false"
       aria-controls="site-menu"
       onclick="const menu = document.getElementById('site-menu'); const expanded = this.getAttribute('aria-expanded') === 'true'; menu.classList.toggle('hidden'); this.setAttribute('aria-expanded', expanded ? 'false' : 'true');"
@@ -16,33 +16,33 @@
     </button>
 
     <div class="hidden items-center gap-2 md:flex">
-      <a href="{{ '/' | relative_url }}" class="rounded-full px-4 py-2 text-sm font-semibold transition {% if page.url == '/' %}bg-white text-slate-950{% else %}text-slate-200 hover:bg-white/10 hover:text-white{% endif %}">
+      <a href="{{ '/' | relative_url }}" class="rounded-full px-4 py-2 text-sm font-semibold transition {% if page.url == '/' %}bg-platformBlue text-white{% else %}text-platformMuted hover:bg-platformSky hover:text-platformBlueDark{% endif %}">
         Home
       </a>
-      <a href="{{ '/projects/2025/' | relative_url }}" class="rounded-full px-4 py-2 text-sm font-semibold transition {% if page.url contains '/projects/' or page.url contains '/projects-' %}bg-white text-slate-950{% else %}text-slate-200 hover:bg-white/10 hover:text-white{% endif %}">
+      <a href="{{ '/projects/2025/' | relative_url }}" class="rounded-full px-4 py-2 text-sm font-semibold transition {% if page.url contains '/projects/' or page.url contains '/projects-' %}bg-platformBlue text-white{% else %}text-platformMuted hover:bg-platformSky hover:text-platformBlueDark{% endif %}">
         Student Projects
       </a>
-      <a href="{{ '/about/' | relative_url }}" class="rounded-full px-4 py-2 text-sm font-semibold transition {% if page.url contains '/about/' %}bg-white text-slate-950{% else %}text-slate-200 hover:bg-white/10 hover:text-white{% endif %}">
+      <a href="{{ '/about/' | relative_url }}" class="rounded-full px-4 py-2 text-sm font-semibold transition {% if page.url contains '/about/' %}bg-platformBlue text-white{% else %}text-platformMuted hover:bg-platformSky hover:text-platformBlueDark{% endif %}">
         About
       </a>
-      <a href="{{ '/acknowledgements/' | relative_url }}" class="rounded-full px-4 py-2 text-sm font-semibold transition {% if page.url contains '/acknowledgements/' %}bg-white text-slate-950{% else %}text-slate-200 hover:bg-white/10 hover:text-white{% endif %}">
+      <a href="{{ '/acknowledgements/' | relative_url }}" class="rounded-full px-4 py-2 text-sm font-semibold transition {% if page.url contains '/acknowledgements/' %}bg-platformBlue text-white{% else %}text-platformMuted hover:bg-platformSky hover:text-platformBlueDark{% endif %}">
         Acknowledgements
       </a>
     </div>
   </div>
 
   <div id="site-menu" class="hidden pt-4 md:hidden">
-    <div class="flex flex-col gap-2 border-t border-white/10 pt-4">
-      <a href="{{ '/' | relative_url }}" class="rounded-2xl px-4 py-3 text-sm font-semibold transition {% if page.url == '/' %}bg-white text-slate-950{% else %}bg-white/5 text-slate-100 hover:bg-white/10{% endif %}">
+    <div class="flex flex-col gap-2 border-t border-platformBorder pt-4">
+      <a href="{{ '/' | relative_url }}" class="rounded-2xl px-4 py-3 text-sm font-semibold transition {% if page.url == '/' %}bg-platformBlue text-white{% else %}bg-platformSky text-platformText hover:bg-[#e2ebff]{% endif %}">
         Home
       </a>
-      <a href="{{ '/projects/2025/' | relative_url }}" class="rounded-2xl px-4 py-3 text-sm font-semibold transition {% if page.url contains '/projects/' or page.url contains '/projects-' %}bg-white text-slate-950{% else %}bg-white/5 text-slate-100 hover:bg-white/10{% endif %}">
+      <a href="{{ '/projects/2025/' | relative_url }}" class="rounded-2xl px-4 py-3 text-sm font-semibold transition {% if page.url contains '/projects/' or page.url contains '/projects-' %}bg-platformBlue text-white{% else %}bg-platformSky text-platformText hover:bg-[#e2ebff]{% endif %}">
         Student Projects
       </a>
-      <a href="{{ '/about/' | relative_url }}" class="rounded-2xl px-4 py-3 text-sm font-semibold transition {% if page.url contains '/about/' %}bg-white text-slate-950{% else %}bg-white/5 text-slate-100 hover:bg-white/10{% endif %}">
+      <a href="{{ '/about/' | relative_url }}" class="rounded-2xl px-4 py-3 text-sm font-semibold transition {% if page.url contains '/about/' %}bg-platformBlue text-white{% else %}bg-platformSky text-platformText hover:bg-[#e2ebff]{% endif %}">
         About
       </a>
-      <a href="{{ '/acknowledgements/' | relative_url }}" class="rounded-2xl px-4 py-3 text-sm font-semibold transition {% if page.url contains '/acknowledgements/' %}bg-white text-slate-950{% else %}bg-white/5 text-slate-100 hover:bg-white/10{% endif %}">
+      <a href="{{ '/acknowledgements/' | relative_url }}" class="rounded-2xl px-4 py-3 text-sm font-semibold transition {% if page.url contains '/acknowledgements/' %}bg-platformBlue text-white{% else %}bg-platformSky text-platformText hover:bg-[#e2ebff]{% endif %}">
         Acknowledgements
       </a>
     </div>

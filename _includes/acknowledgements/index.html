@@ -3,8 +3,8 @@
 
   <section class="space-y-5">
     <div>
-      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Course staff</p>
-      <h2 class="mt-2 font-display text-3xl text-white">People who built and supported the course</h2>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-platformBlue">Course staff</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-platformText">People who built and supported the course</h2>
     </div>
     <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
       {% for ack in site.acknowledgements %}
@@ -23,8 +23,8 @@
   {% if guest_speakers.size > 0 %}
     <section class="space-y-5">
       <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Guest speakers</p>
-        <h2 class="mt-2 font-display text-3xl text-white">Special thanks to visiting contributors</h2>
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-platformBlue">Guest speakers</p>
+        <h2 class="mt-2 font-display text-3xl font-extrabold tracking-tight text-platformText">Special thanks to visiting contributors</h2>
       </div>
       <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {% for ack in guest_speakers %}

@@ -115,5 +115,10 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
+  - node_modules
+  - package-lock.json
+  - package.json
+  - tailwind.config.js
+  - scripts
 
 ignore_theme_config: FALSE

@@ -1,19 +1,26 @@
-<article class="overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-900/80 shadow-soft">
+<article class="overflow-hidden rounded-[1.5rem] border border-platformBorder bg-white shadow-panel">
   {% if ack_portrait != nil %}
-    <img class="aspect-[4/3] w-full object-cover" src="/img/people/{{ ack_portrait }}" alt="Portrait of {{ ack_name }}">
+    {% assign responsive_people = site.data.responsive_images["people"] %}
+    {% assign portrait_alt = "Portrait of " | append: ack_name %}
+    {% assign portrait_image = responsive_people[ack_portrait] %}
+    {% if portrait_image %}
+      {% include responsive-image.html image=portrait_image alt=portrait_alt class="aspect-[4/3] w-full object-cover" %}
+    {% else %}
+      <img class="aspect-[4/3] w-full object-cover" src="/img/people/{{ ack_portrait }}" alt="{{ portrait_alt }}" loading="lazy" decoding="async">
+    {% endif %}
   {% else %}
-    <div class="flex aspect-[4/3] items-end bg-[linear-gradient(135deg,_rgba(157,34,53,0.9),_rgba(23,32,51,0.95))] p-5">
-      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-white/80">Course contributor</p>
+    <div class="flex aspect-[4/3] items-end bg-[linear-gradient(135deg,_#eff6ff,_#dbeafe)] p-5">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-platformBlueDark">Course contributor</p>
     </div>
   {% endif %}
 
   <div class="space-y-2 p-5">
-    <p class="text-xs font-semibold uppercase tracking-[0.24em] text-gold">{{ ack_role }}</p>
-    <h3 class="text-xl font-bold text-white">
-      <a href="{{ ack_url }}" class="transition hover:text-gold">{{ ack_name }}</a>
+    <p class="ack-role text-xs font-semibold uppercase text-platformBlue">{{ ack_role }}</p>
+    <h3 class="text-xl font-bold text-platformText">
+      <a href="{{ ack_url }}" class="transition hover:text-platformBlue">{{ ack_name }}</a>
     </h3>
     {% if ack_desc and ack_desc != "" %}
-      <p class="text-sm leading-6 text-slate-300">{{ ack_desc }}</p>
+      <p class="text-sm leading-6 text-platformMuted">{{ ack_desc }}</p>
     {% endif %}
   </div>
 </article>

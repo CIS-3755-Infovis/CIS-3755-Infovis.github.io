@@ -5,6 +5,7 @@ metaTitle: "About CIS 3755 | Temple University"
 description: "CIS 3755 is an Information Visualization course at Temple University created and taught by Stephen MacNeil. Students explore visual encoding, perception, color theory, and interactive data visualization through active learning lectures and D3.js labs." 
 permalink: /about/
 weight: 3
+wide_content: true
 ---
 
 **CIS 3755: Introduction to Information Visualization** explores how data can be transformed into clear, compelling, and interactive visual representations. Originally introduced as a special topics course (CIS 4330/4360) in Spring 2022, this class quickly gained popularity and was offered three times before earning its own permanent course number. Today, it serves as an entry point for students interested in data visualization, human–computer interaction, and visual analytics.
@@ -16,9 +17,12 @@ weight: 3
 
 This course is taught by [Stephen MacNeil](http://stevemacn.github.io/), Assistant Professor in the Department of Computer and Information Sciences at Temple University. Dr. MacNeil also directs the [Temple HCI Lab](https://www.linkedin.com/company/86923277) and the [OwlHacks Hackathon](https://www.owlhacks.com/) also at Temple University. 
 
-If you're interested in expanding your knowledge in HCI or computer science, check out additional HCI-focused and related courses offered by the Temple University Computer Science Department here:
-
-[Additional Courses](https://stevemacn.github.io/courses/)
+<div style="margin-top: 1.75rem; border: 1px solid #dbe4f0; border-radius: 1.25rem; background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 100%); padding: 1.25rem 1.35rem;">
+  <p style="margin: 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #1f4ed8;">Interested in more HCI or research?</p>
+  <h3 style="margin: 0.55rem 0 0; font-size: 1.35rem; line-height: 1.2; color: #102033;">Explore related Temple courses and research-oriented opportunities.</h3>
+  <p style="margin: 0.75rem 0 0; color: #5d6b82; line-height: 1.75;">Students who want to go deeper into human-computer interaction, design, research, and adjacent CS topics can browse additional courses taught by Stephen MacNeil.</p>
+  <p style="margin: 1rem 0 0;"><a href="https://stevemacn.github.io/courses/" style="display: inline-block; border-radius: 0.85rem; background: #1f4ed8; padding: 0.8rem 1rem; color: #ffffff; font-weight: 700; text-decoration: none;">View Other Courses</a></p>
+</div>
 
 ## Course Format and Topics
 
